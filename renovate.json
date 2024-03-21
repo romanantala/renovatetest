@@ -2,5 +2,20 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+  "customDatasources": {
+    "geo": {
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/romanantala/renovatetest/master/version_remote",
+      "format": "plain",
+    }
+  },  
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^values$"],
+      "matchStrings": ["ENV VERSION=(?<currentValue>.*?)\\n"],
+      "datasourceTemplate": "custom.geo",
+      "depNameTemplate": "plain",
+    }
   ]
 }
