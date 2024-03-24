@@ -5,15 +5,15 @@
   ],
   "customDatasources": {
     "geo": {
-      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/romanantala/renovatetest/master/version_remote",
+      "defaultRegistryUrlTemplate": "https://raw.githubusercontent.com/romanantala/renovatetest/master/bin_version_remote",
       "format": "plain",
     }
   },  
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^values$"],
-      "matchStrings": ["ENV IP2_VERSION=(?<currentValue>.*?)\\n"],
+      "fileMatch": ["^bin_values$"],
+      "matchStrings": ["ENV IP2_BIN_VERSION=(?<currentValue>.*?)\\n"],
       "datasourceTemplate": "custom.geo",
       "depNameTemplate": "plain",
     }
