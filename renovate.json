@@ -13,7 +13,7 @@
     {
       "customType": "regex",
       "fileMatch": ["^values$"],
-      "matchStrings": ["ENV VERSION=(?<currentValue>.*?)\\n"],
+      "matchStrings": ["ENV IP2_VERSION=(?<currentValue>.*?)\\n"],
       "datasourceTemplate": "custom.geo",
       "depNameTemplate": "plain",
     }
